@@ -105,9 +105,9 @@ login_db
 
 CREATE TABLE users (
 id INT AUTO_INCREMENT PRIMARY KEY,
-name VARCHAR(100),
-email VARCHAR(100),
-password VARCHAR(100),
+name VARCHAR(50),
+email VARCHAR(50),
+password VARCHAR(50),
 user_type VARCHAR(20)
 );
 
