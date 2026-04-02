@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -665,7 +664,143 @@
             </ul>
         </div>
     </div>
+<!-- ================== YOUR FULL CODE ABOVE (UNCHANGED) ================== -->
 
+
+<!-- ================== CHATBOT START ================== -->
+
+<style>
+/* Chat button */
+.chatbot-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007074;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+/* Chat container */
+.chatbot-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 999;
+}
+
+/* Header */
+.chatbot-header {
+    background: #034C53;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Messages */
+.chatbot-messages {
+    height: 250px;
+    overflow-y: auto;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Input area */
+.chatbot-input {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+.chatbot-input input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+}
+
+.chatbot-input button {
+    background: #007074;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+</style>
+
+<!-- Chat Button -->
+<button class="chatbot-btn" onclick="toggleChat()">💬</button>
+
+<!-- Chat Box -->
+<div class="chatbot-container" id="chatbot">
+    <div class="chatbot-header">Travel Assistant</div>
+
+    <div class="chatbot-messages" id="messages">
+        <p><b>Bot:</b> Hello! How can I help you? 😊</p>
+    </div>
+
+    <div class="chatbot-input">
+        <input type="text" id="userInput" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script>
+function toggleChat() {
+    let chat = document.getElementById("chatbot");
+    chat.style.display = chat.style.display === "flex" ? "none" : "flex";
+}
+
+function sendMessage() {
+    let input = document.getElementById("userInput");
+    let message = input.value.trim();
+
+    if (message === "") return;
+
+    let messages = document.getElementById("messages");
+
+    // User message
+    messages.innerHTML += "<p><b>You:</b> " + message + "</p>";
+
+    // Simple bot reply logic
+    let reply = "Sorry, I didn't understand.";
+
+    if (message.toLowerCase().includes("hello")) {
+        reply = "Hi! 👋 How can I assist you with your trip?";
+    } 
+    else if (message.toLowerCase().includes("package")) {
+        reply = "We offer packages for Goa, Manali, Taj Mahal and more!";
+    } 
+    else if (message.toLowerCase().includes("price")) {
+        reply = "Prices start from ₹25,000 depending on destination.";
+    } 
+    else if (message.toLowerCase().includes("goa")) {
+        reply = "Goa is perfect for beaches 🌊 and nightlife!";
+    } 
+    else if (message.toLowerCase().includes("contact")) {
+        reply = "You can visit our Contact page for support.";
+    }
+
+    // Bot message
+    messages.innerHTML += "<p><b>Bot:</b> " + reply + "</p>";
+
+    // Scroll to bottom
+    messages.scrollTop = messages.scrollHeight;
+
+    input.value = "";
+}
+</script>
+
+<!-- ================== CHATBOT END ================== -->
 
     <footer>
         <p>© 2025 Wandering Souls | Designed by Satyam & Khushi</p>
@@ -673,15 +808,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
