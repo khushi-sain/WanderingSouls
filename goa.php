@@ -1,9 +1,9 @@
 <?php
 $hotels = [
-["id"=>1,"name"=>"Sea Breeze Resort","price"=>2500,"rating"=>7.4,"location"=>"Candolim","facility"=>"breakfast","img"=>"hotel1goa.png"],
-["id"=>2,"name"=>"Paradise Village Beach Resort","price"=>3200,"rating"=>8.3,"location"=>"Baga","facility"=>"beach","img"=>"hotel2goa.png"],
-["id"=>3,"name"=>"Sunset Villa","price"=>2000,"rating"=>6.1,"location"=>"Anjuna","facility"=>"pool","img"=>"hotel3goa.webp"],
-["id"=>4,"name"=>"Calangute Residency","price"=>4111,"rating"=>8.0,"location"=>"Calangute","facility"=>"breakfast","img"=>"hotel4goa.png"],
+["id"=>1,"name"=>"Sea Breeze Resort","price"=>2500,"rating"=>7.4,"location"=>"Candolim","facility"=>"breakfast","img"=>"goaimages/hotel1goa.png"],
+["id"=>2,"name"=>"Paradise Village Beach Resort","price"=>3200,"rating"=>8.3,"location"=>"Baga","facility"=>"beach","img"=>"goaimages/hotel2goa.png"],
+["id"=>3,"name"=>"Sunset Villa","price"=>2000,"rating"=>6.1,"location"=>"Anjuna","facility"=>"pool","img"=>"goaimages/hotel3goa.webp"],
+["id"=>4,"name"=>"Calangute Residency","price"=>4111,"rating"=>8.0,"location"=>"Calangute","facility"=>"breakfast","img"=>"goaimages/hotel4goa.png"],
 ];
 
 $search = $_GET['search'] ?? '';
