@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `bookings` (
   `id` int NOT NULL,
   `user_id` int DEFAULT NULL,
-  `destination` varchar(100) DEFAULT NULL,
+  `destination` varchar(50) DEFAULT NULL,
   `travel_date` date DEFAULT NULL,
   `persons` int DEFAULT NULL,
   `status` varchar(50) DEFAULT 'pending'
